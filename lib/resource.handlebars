@@ -9,7 +9,7 @@
                 <span class="methods">
                     {{#methods}}
                         <a href="#" data-toggle="modal" data-target="#{{../uniqueId}}_{{method}}">
-                            <span class="badge badge_{{method}}">{{method}}{{lock securedBy}}</span>
+                            <span class="badge badge_{{method}}">{{method}}{{lock securedBy}} {{#is}}{{traitsIconHelper this}} {{/is}}</span>
                         </a>
                     {{/methods}}
                 </span>
@@ -26,7 +26,7 @@
                 <div class="list-group">
                     {{#methods}}
                         <div data-toggle="modal" data-target="#{{../uniqueId}}_{{method}}" class="list-group-item">
-                            <span class="badge badge_{{method}}">{{method}}{{lock securedBy}}</span>
+                            <span class="badge badge_{{method}}">{{method}}{{lock securedBy}} {{#is}}{{traitsIconHelper this}} {{/is}}</span>
                             <div class="method_description">{{md description}}</div>
                             <div class="clearfix"></div>
                         </div>
@@ -56,6 +56,7 @@
                                     {{lock securedBy}} Secured by {{securedBy}}
                                 </div>
                             {{/if}}
+                            
 
                             {{#if is}}
                                 <div class="alert alert-warning">
