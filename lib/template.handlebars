@@ -141,7 +141,7 @@
 <body data-spy="scroll" data-target="#sidebar">
     <div class="container">
         <div class="row">
-            <div class="col-md-9" role="main">
+            <div class="col-md-12" role="main">
                 <div class="page-header">
                     <h1>{{title}} API documentation{{#if version}} <small>version {{version}}</small>{{/if}}</h1>
                     <p>{{baseUri}}</p>
@@ -168,16 +168,6 @@
                         </div>
                     </div>
                 {{/resources}}
-            </div>
-
-            <div class="col-md-3">
-                <div id="sidebar" class="hidden-print affix" role="complementary">
-                    <ul class="nav nav-pills nav-stacked">
-                        {{#resources}}
-                            <li><a href="#{{uniqueId}}">{{#if displayName}}{{displayName}}{{/if}}{{#unless displayName}}{{relativeUri}}{{/unless}}</a></li>
-                        {{/resources}}
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
